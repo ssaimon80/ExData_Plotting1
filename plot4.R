@@ -12,7 +12,7 @@ if (!("hpc_ssaimon80" %in% ls())) {
   }
   
   #load the dataset into a dataframe named hpc_ssaimon80
-  #no need to close the connection since read.csv fill do it
+  #no need to close the connection since read.csv will do it
   message("Loading data in R ...");
   datacon <- unz("./download/household_power_consumption.zip", filename = "household_power_consumption.txt");
   hpc_ssaimon80 <- read.csv(datacon, sep = ";", header = T, stringsAsFactors = F, na.strings = "?");
@@ -34,7 +34,7 @@ if (!("hpc_ssaimon80" %in% ls())) {
   hpc_ssaimon80 <- hpc_ssaimon80[,c(8,1:7)];
 }
 
-#PLOT2 begins here
+# **** PLOT4 begins here ****
 
 #create new png device
 if (!file.exists("./ExploratoryDataAnalysis")) {
